@@ -1,0 +1,27 @@
+{
+    name: string,
+    description?: string,
+    inputSchema: {
+        type: "object",
+        properties: { ... }
+    },
+    annotations?: {
+        title?: string,
+        readOnlyHint?: boolean,
+        destructiveHint?: boolean,
+        idempotentHint?: boolean,
+        openWorldHint?: boolean
+    }
+}
+
+1. Tên của tool và không được trùng lặp trong cùng MCP server.
+2. description (Optional): Mô tả về tool.
+3. inputSchema: JSON Schema định nghĩa các tham số đầu vào của tool.
+    - type: Luôn được set giá trị "object".
+    - properties: Các tham số cụ thể của tool.
+4. annotations (tùy chọn): Gợi ý về hành vi của tool.
+    - title: Tiêu đề dễ hiểu dành cho con người.
+    - readOnlyHint: Nếu giá trị là true, tool không thay đổi môi trường/dữ liệu.
+    - destructiveHint: Nếu giá trị là true, tool có thể thực hiện các thay đổi mang tính phá hủy.
+    - idempotentHint: Nếu giá trị là true, gọi lặp lại với cùng tham số sẽ không gây thêm hiệu ứng.
+    - openWorldHint: Nếu giá trị là true, tool tương tác với các object khác ở bên ngoài.

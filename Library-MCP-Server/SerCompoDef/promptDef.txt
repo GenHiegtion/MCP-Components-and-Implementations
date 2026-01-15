@@ -1,0 +1,18 @@
+{
+    name: string,
+    description?: string,
+    arguments?: [
+        {
+            name: string,
+            description?: string,
+            required?: boolean
+        }
+    ]
+}
+
+1. name: Tên duy nhất của prompt (không được trùng).
+2. description (tùy chọn): Mô tả dễ hiểu về prompt dành cho con người.
+3. arguments (tùy chọn): Danh sách các arguments mà prompt có thể chấp nhận.
+    - name: Tên của argument.
+    - description (tùy chọn): Mô tả về argument.
+    - required (tùy chọn): Xác định liệu argument có bắt buộc hay không.

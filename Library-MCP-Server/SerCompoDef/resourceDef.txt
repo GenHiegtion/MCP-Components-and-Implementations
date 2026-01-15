@@ -1,0 +1,16 @@
+
+{
+    uri: string,
+    name: string,
+    description?: string,
+    mimeType?: string,
+    size?: number
+}
+
+1. uri: Unique name (định danh) duy nhất của resource.
+2. name: Tên dễ hiểu.
+3. description (tùy chọn): Mô tả bổ sung.
+4. mimeType (tùy chọn): Loại MIME (kiểu nội dung) của resource.
+5. size (tùy chọn): Kích thước resource tính bằng byte.
+
+Resource URI: [protocol]://[host]/[path]
